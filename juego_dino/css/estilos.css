@@ -1,0 +1,118 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #e0e0e0; /* Fondo del navegador */
+    overflow: hidden;
+    height: 100vh;
+    width: 100vw;
+}
+
+#game {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background-color: #b0b0b0; /* Fondo del juego */
+    overflow: hidden;
+}
+
+img {
+    position: absolute;
+    bottom: 0;
+    width: 70px; /* Ajusta el tamaño de todas las imágenes aquí */
+    height: auto; /* Mantiene la proporción de la imagen */
+}
+
+#ground {
+    width: 100%;
+    height: 30px; /* Aumenta la altura del suelo */
+    bottom: 0;
+}
+
+.dino {
+    width: 30px; /* Aumenta el tamaño del dinosaurio */
+    height: 50px; /* Aumenta el tamaño del dinosaurio */
+    bottom: 20px;
+}
+
+#dino {
+    position: absolute;
+    left: 50px;
+    width: 30px; /* Aumenta el tamaño del dinosaurio */
+    height: 50px; /* Aumenta el tamaño del dinosaurio */
+}
+
+.obstacle {
+    width: 30px; /* Aumenta el tamaño de los obstáculos */
+    height: 60px; /* Aumenta el tamaño de los obstáculos */
+    position: absolute;
+    bottom: 20px; /* Alinea la base de los obstáculos con el suelo */
+}
+
+#cactus1 {
+    right: 100px; /* Posición inicial desde la derecha */
+    top: 580px;
+    width: 30px; /* Aumenta el tamaño del cactus */
+    height: 40px; /* Aumenta el tamaño del cactus */
+}
+
+#cactus2 {
+    right: 500px; /* Posición inicial más separada del cactus 1 */
+    top: 580px;
+    width: 50px; /* Aumenta el tamaño del cactus */
+    height: 40px; /* Aumenta el tamaño del cactus */
+}
+
+#cactus3 {
+    right: 900px; /* Posición inicial más separada del cactus 2 */
+    top: 580px;
+    width: 30px; /* Aumenta el tamaño del cactus */
+    height: 40px; /* Aumenta el tamaño del cactus */
+}
+
+#pajaro {
+    width: 40px; /* Aumenta el tamaño del pájaro */
+    height: 30px; /* Aumenta el tamaño del pájaro */
+    position: absolute;
+    top: 550px; /* Ajusta la posición para que el pájaro esté alineado adecuadamente */
+    right: calc(100px + 200px); /* Separación del pájaro de los cactus */
+}
+
+#score {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 48px; /* Aumenta el tamaño del texto del puntaje */
+    font-weight: bold;
+    color: #333; /* Color del puntaje */
+    border: 4px solid #333; /* Aumenta el borde alrededor del puntaje */
+    border-radius: 8px; /* Aumenta los bordes redondeados */
+    padding: 15px; /* Aumenta el padding */
+    background: rgba(255, 255, 255, 0.7); /* Fondo semitransparente */
+}
+
+#nightMode {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.274); /* Fondo oscuro semi-transparente */
+    top: 0;
+    left: 0;
+    display: none; /* Inicialmente oculto */
+}
+
+@keyframes flap {
+        0% {
+            transform: translateY(0);
+        }
+        50% {
+            transform: translateY(-10px); /* Ajusta la altura máxima del movimiento vertical */
+        }
+        100% {
+            transform: translateY(0);
+        }
+    }
+
+    #pajaro {
+        animation: flap 1s ease-in-out infinite; /* Ajusta la duración y el tipo de animación */
+    }
+
